@@ -148,6 +148,7 @@ const productFields = {
 };
 console.log("productFields",productFields)
 
+
 const productOptions = {
     method: "POST",
     headers:{
@@ -190,14 +191,15 @@ const invoiceFields = {
     },
     date: "2024-03-14",
     layout: {
-        layoutNumber: Math.floor(Math.random() * 10) + 1
+        layoutNumber: 19
     },
-    paymentTerms:{
-        paymentTermsNumber: 1,
-        daysOfCredit: 14,
-        name: "Lobende maned 14 dage",
-        paymentTermsType: "invoiceMonth"
-    },
+    paymentTerms: {
+                paymentTermsNumber: 5,
+                daysOfCredit: 30,
+                name: "Netto 30 dage",
+                paymentTermsType: "net",
+                self: "https://restapi.e-conomic.com/payment-terms/5"
+            },
     recipient: {
         name: event.name,
         address: event.address,
@@ -206,9 +208,7 @@ const invoiceFields = {
         vatZone:{
             name: "domestic",
             vatZoneNumber:event.vatZone,
-            enabledForCustomer: true,
-            enabledForSupplier: true
-
+            self: `https://restapi.e-conomic.com/vat-zones/${event.vatZone}`
         }
         
     },
