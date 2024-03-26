@@ -51,6 +51,19 @@ Start the serverless locally
 
 What did you learn while building this project? What challenges did you face and how did you overcome them?
 
+---
+
+During the development of this project, I embarked on a journey to expand my knowledge and skills in AWS Lambda functions, an area I had previously only been familiar with through basic concepts. Initially, my plan was to directly write the code within the AWS Lambda console to integrate two backends. However, I quickly realized that this approach was not feasible without utilizing AWS EventBridge, which is essential for handling webhook notifications.
+
+The first challenge I faced was the need to create a separate backend using Node.js and Express to listen for webhook notifications whenever a new product or order was created. This required a significant shift in my initial approach, as I had to learn and implement a new technology stack.
+
+To overcome this challenge, I invested time in learning Node.js and Express, which were new to me. I also had to familiarize myself with the AWS SDK and Serverless Framework, tools that are crucial for running and deploying AWS Lambda functions. This learning process was both challenging and rewarding, as it allowed me to deepen my understanding of cloud computing and serverless architecture.
+
+Another challenge was the integration of the two backends. I had to ensure that the data flow between the two systems was seamless and efficient. This involved careful planning and testing to ensure that the webhook notifications were correctly processed and that the data was accurately transferred between the systems.
+
+In summary, this project was a valuable learning experience that allowed me to expand my technical skills and gain hands-on experience with AWS Lambda functions, Node.js, Express, and serverless architecture. The challenges I faced were significant, but overcoming them not only enhanced my understanding of these technologies but also equipped me with valuable problem-solving skills that I can apply to future projects.
+
+---
 
 ## Documentation
 
